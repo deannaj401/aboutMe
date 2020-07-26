@@ -10,13 +10,21 @@ background-color: lightblue;
 
 } 
 
+h2{
+  color: green;
+}
 
+li {
+  color: purple;
+  font-size: medium;
+  font-family: cursive;
+}
 
 p {
   color: green;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: medium;
-  text-align: center;
+
 }
 
 
