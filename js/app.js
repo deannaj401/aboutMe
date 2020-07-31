@@ -117,36 +117,38 @@ function getNumber(){
 }
 getNumber();
 
-var favFood = ['steak', 'ice cream', 'tacos', 'cake', 'onion rings', 'pudding'];
-var correctAnswer = false;
-// either a food will be a favorite or a not favorite. so if notFav is = true then user is incorrect
-var attempts = 6;
-// This for loop loops through the question 6 times giving the user 6 chances to answer correctly
-// for (var j = 0; j < 6; j++) {
-var whatFood = prompt('What is one of my favorite foods? You have 6 guesses').toLowerCase();
+function getFood(){
+  var favFood = ['steak', 'ice cream', 'tacos', 'cake', 'onion rings', 'pudding'];
+  var correctAnswer = false;
+  // either a food will be a favorite or a not favorite. so if notFav is = true then user is incorrect
+  var attempts = 6;
+  // This for loop loops through the question 6 times giving the user 6 chances to answer correctly
+  // for (var j = 0; j < 6; j++) {
+  var whatFood = prompt('What is one of my favorite foods? You have 6 guesses').toLowerCase();
 
-while (attempts > 0 && !correctAnswer) {
-  attempts--;
+  while (attempts > 0 && !correctAnswer) {
+    attempts--;
 
-  for (var i = 0; i < favFood.length; i++) {
-    if (whatFood === favFood[i]) {
-      alert('Yes that is correct');
-      rightAnswer++;
-      // break;
-      // since it is a favorite food then not a favorite is false
-      correctAnswer = true;
+    for (var i = 0; i < favFood.length; i++) {
+      if (whatFood === favFood[i]) {
+        alert('Yes that is correct');
+        rightAnswer++;
+        // break;
+        // since it is a favorite food then not a favorite is false
+        correctAnswer = true;
 
       //since the user got a correct answer then the loop is finished.
+      }
+    } // if any answer is correct then notFav false because it is a favorite food. If the answer is incorrect than notFav will be = true because it is not a favorite food.
+
+    if (correctAnswer === false) {
+      whatFood = prompt('No that is not correct try again').toLowerCase();
+
     }
-  } // if any answer is correct then notFav false because it is a favorite food. If the answer is incorrect than notFav will be = true because it is not a favorite food.
-
-  if (correctAnswer === false) {
-    whatFood = prompt('No that is not correct try again').toLowerCase();
-
   }
+  alert('My favorite foods are Steak, Tacos, Ice Cream, Onion Rings, Pudding and Cake');
 }
-alert('My favorite foods are Steak, Tacos, Ice Cream, Onion Rings, Pudding and Cake');
-
+getFood();
 
 alert('you got ' + rightAnswer + ' questions correct about me!');
 // console.log('Thanks for playing ' + userName + ' Check out my page for even more fun facts about me');
