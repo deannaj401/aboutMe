@@ -1,82 +1,93 @@
 'use strict';
 
-
-
-var userName = prompt('What is your name?');
-// console.log("Hello " + userName + " Nice to meet you! Now let'\s see how much you know about me" );
-alert('Hello ' + userName + ' Nice to meet you! Now we can see how much you know about me');
-
+var userName;
+function getName () {
+  userName = prompt('What is your name?');
+  // console.log("Hello " + userName + " Nice to meet you! Now let'\s see how much you know about me" );
+  alert('Hello ' + userName + ' Nice to meet you! Now we can see how much you know about me');
+}
+getName();
 
 var rightAnswer = 0;
 //this is the variable to count correct answers
+function getPets(){
+  var myPets = prompt('Do I have any pets?').toLowerCase();
 
-var myPets = prompt('Do I have any pets?').toLowerCase();
 
-
-if (myPets === 'yes' || myPets === 'y') {
+  if (myPets === 'yes' || myPets === 'y') {
   // console.log('That is correct! I have 3 dogs and 2 cats');
-  alert('That is correct! I have 3 dogs and 2 cats');
-  rightAnswer++;
-} else if (myPets === 'no' || myPets === 'n') {
+    alert('That is correct! I have 3 dogs and 2 cats');
+    rightAnswer++;
+  } else if (myPets === 'no' || myPets === 'n') {
   // console.log('Actually I have 3 dogs and 2 cats');
-  alert('Actually I have 3 dogs and 2 cats');
+    alert('Actually I have 3 dogs and 2 cats');
+  }
 }
+getPets();
+
+function getMusic (){
+  var playMusic = prompt('Do I play any musical instruments?').toLowerCase();
 
 
-
-var playMusic = prompt('Do I play any musical intruments?').toLowerCase();
-
-
-if (playMusic === 'yes' || playMusic === 'y') {
+  if (playMusic === 'yes' || playMusic === 'y') {
   // console.log('That is right! I play piano and guitar');
-  alert('That is right! I play piano and guitar');
-  rightAnswer++;
-} else if (playMusic === 'no' || playMusic === 'n') {
+    alert('That is right! I play piano and guitar');
+    rightAnswer++;
+  } else if (playMusic === 'no' || playMusic === 'n') {
   // console.log('The truth is I play piano and guitar');
-  alert('The truth is I play piano and guitar');
+    alert('The truth is I play piano and guitar');
 
+  }
 }
+getMusic();
 
-var visitParis = prompt('Have I ever been to Paris?').toLowerCase();
+function getParis(){
+  var visitParis = prompt('Have I ever been to Paris?').toLowerCase();
 
 
-if (visitParis === 'yes' || visitParis === 'y') {
+  if (visitParis === 'yes' || visitParis === 'y') {
   // console.log('Sadly that is not correct. But maybe someday');
-  alert('Sadly that is not correct. But maybe someday');
-} else if (visitParis === 'no' || visitParis === 'n') {
+    alert('Sadly that is not correct. But maybe someday');
+  } else if (visitParis === 'no' || visitParis === 'n') {
   // console.log('Unfortunately that is correct. But maybe someday');
-  alert('Unfortunately that is correct. But maybe someday');
-  rightAnswer++;
+    alert('Unfortunately that is correct. But maybe someday');
+    rightAnswer++;
 
+  }
 }
+getParis();
+
+function getBurger(){
+  var chzBrgr = prompt('Have I ever driven 14 hours for a cheeseburger?').toLowerCase();
 
 
-var chzBrgr = prompt('Have I ever driven 14 hours for a cheeseburger?').toLowerCase();
-
-
-if (chzBrgr === 'yes' || chzBrgr === 'y') {
+  if (chzBrgr === 'yes' || chzBrgr === 'y') {
   // console.log('Yep I did that. In and Out Burgers are the best!');
-  alert('Yep I did that. In and Out Burgers are the best!');
-  rightAnswer++;
-} else if (chzBrgr === 'no' || chzBrgr === 'n') {
+    alert('Yep I did that. In and Out Burgers are the best!');
+    rightAnswer++;
+  } else if (chzBrgr === 'no' || chzBrgr === 'n') {
   // console.log('I really did that. Totally worth it too');
-  alert('I really did that. Totally worth it too');
+    alert('I really did that. Totally worth it too');
+  }
 }
+getBurger();
+
+function getLott(){
+  var winLott = prompt('Have I ever won the Lottery?').toLowerCase();
 
 
-var winLott = prompt('Have I ever won the Lottery?').toLowerCase();
-
-
-if (winLott === 'yes' || winLott === 'y') {
+  if (winLott === 'yes' || winLott === 'y') {
   // console.log('No I did not. But you will feel like YOU won the lottery if you hire me!');
-  alert('No I did not. But you will feel like YOU won the lottery if you hire me!');
+    alert('No I did not. But you will feel like YOU won the lottery if you hire me!');
 
-} else if (winLott === 'no' || winLott === 'n') {
+  } else if (winLott === 'no' || winLott === 'n') {
   // console.log('That is correct.But you will feel like YOU won the lottery if you hire me!');
-  alert('That is correct.But you will feel like YOU won the lottery if you hire me!');
-  rightAnswer++;
+    alert('That is correct.But you will feel like YOU won the lottery if you hire me!');
+    rightAnswer++;
 
+  }
 }
+getLott();
 
 
 var fourTries = 0;
