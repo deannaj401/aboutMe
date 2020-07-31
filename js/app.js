@@ -89,31 +89,33 @@ function getLott(){
 }
 getLott();
 
+function getNumber(){
+  var fourTries = 0;
+  //this is counting the number of tries for a correct answer
 
-var fourTries = 0;
-//this is counting the number of tries for a correct answer
-
-while (fourTries < 4) {
+  while (fourTries < 4) {
   //The while loop runs while the variable is less than four
 
-  var guessNum = prompt('Guess a number between 1 and 10');
+    var guessNum = prompt('Guess a number between 1 and 10');
 
-  if (guessNum === '7') {
-    alert('Correct! Lucky number 7');
-    rightAnswer++;
-    break;
+    if (guessNum === '7') {
+      alert('Correct! Lucky number 7');
+      rightAnswer++;
+      break;
     //if the user guesses the correct answer which is 7 then the loop ends
-  } else if (guessNum > 7) {
-    alert('Nope! too high!');
-  } else if (guessNum < 7) {
-    alert('Nope! too low!');
-  }
-  if (fourTries === 3) {
-    alert('Nope you are out of tries. It was 7');
-  }
-  fourTries++;
+    } else if (guessNum > 7) {
+      alert('Nope! too high!');
+    } else if (guessNum < 7) {
+      alert('Nope! too low!');
+    }
+    if (fourTries === 3) {
+      alert('Nope you are out of tries. It was 7');
+    }
+    fourTries++;
   //this adds another user guess
+  }
 }
+getNumber();
 
 var favFood = ['steak', 'ice cream', 'tacos', 'cake', 'onion rings', 'pudding'];
 var correctAnswer = false;
